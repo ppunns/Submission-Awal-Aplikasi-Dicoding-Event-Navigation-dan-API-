@@ -1,4 +1,4 @@
-package com.dicoding.test.data.retrofit
+package com.dicoding.test.data.remote.retrofit
 
 import com.dicoding.aplikasidicodingeventnavigationdanapi.data.retrofit.ApiService
 import okhttp3.OkHttpClient

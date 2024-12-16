@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -15,8 +16,7 @@ class HomeFragment : Fragment(){
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
     private lateinit var eventsAdapter: EventAdapter
-    private  val DetailHomeViewModel by viewModels<HomeViewModel>()
-
+    private  val detailHomeViewModel by viewModels<HomeViewModel>()
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         _binding = FragmentHomeBinding.inflate(inflater,container,false)
         return binding.root
@@ -28,12 +28,12 @@ class HomeFragment : Fragment(){
         binding.rvReview.adapter = eventsAdapter
 
 
-        DetailHomeViewModel.getEvents(1)
+        detailHomeViewModel.getEvents(1)
 
-        DetailHomeViewModel.eventList.observe(viewLifecycleOwner) { eventList ->
+        detailHomeViewModel.eventList.observe(viewLifecycleOwner) { eventList ->
             eventsAdapter.submitList(eventList)
         }
-        DetailHomeViewModel.isLoading.observe(viewLifecycleOwner) { isLoading ->
+        detailHomeViewModel.isLoading.observe(viewLifecycleOwner) { isLoading ->
             if (isLoading){
                 binding.progressBar.visibility = View.VISIBLE
             }else{

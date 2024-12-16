@@ -1,13 +1,12 @@
-package com.dicoding.test.ui.notifications
+package com.dicoding.test.ui.DetailEvent
 
 import android.util.Log
-import android.view.View
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.dicoding.test.data.responese.DetailEventResponse
-import com.dicoding.test.data.responese.Event
-import com.dicoding.test.data.retrofit.ApiConfig
+import com.dicoding.test.data.remote.responese.DetailEventResponse
+import com.dicoding.test.data.remote.responese.Event
+import com.dicoding.test.data.remote.retrofit.ApiConfig
 import com.dicoding.test.databinding.ActivityDetailEventBinding
 import retrofit2.Call
 import retrofit2.Callback

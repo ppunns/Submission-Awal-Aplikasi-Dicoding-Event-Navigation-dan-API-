@@ -7,9 +7,9 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.dicoding.test.data.responese.ListEventsItem
+import com.dicoding.test.data.remote.responese.ListEventsItem
 import com.dicoding.test.databinding.ItemEventBinding
-import com.dicoding.test.ui.notifications.DetailEvent
+import com.dicoding.test.ui.DetailEvent.DetailEvent
 
 
 class EventAdapter : ListAdapter<ListEventsItem, EventAdapter.MyViewHolder>(DIFF_CALLBACK){

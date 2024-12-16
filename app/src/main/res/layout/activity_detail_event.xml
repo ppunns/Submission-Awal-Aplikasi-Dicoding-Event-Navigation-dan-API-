@@ -4,31 +4,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.notifications.DetailEvent">
+    tools:context=".ui.DetailEvent.DetailEvent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp">
+
         <ImageView
             android:id="@+id/eventImage"
             android:layout_width="0dp"
             android:layout_height="250dp"
             android:scaleType="centerCrop"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             tools:src="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/favoriteButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="16dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="202dp"
+            android:background="@drawable/rounded_rectangle_background"
+            android:padding="10dp"
+            android:src="@drawable/favorite_border"
+            app:layout_constraintBottom_toBottomOf="@+id/eventImage"
+            app:layout_constraintEnd_toEndOf="@id/eventImage"
+            app:layout_constraintTop_toTopOf="@id/eventImage"
+            app:layout_constraintVertical_bias="0.989" />
 
         <TextView
             android:id="@+id/eventName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
+            android:text=""
             android:textSize="22.78sp"
             android:textStyle="bold"
-            android:text=""
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/eventImage" />

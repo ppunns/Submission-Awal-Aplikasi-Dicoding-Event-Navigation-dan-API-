@@ -1,17 +1,17 @@
-package com.dicoding.test.data.responese
+package com.dicoding.test.data.remote.responese
 
 import com.google.gson.annotations.SerializedName
 
 data class EventResponse(
-	@field:SerializedName("listEvents")
+    @field:SerializedName("listEvents")
 //	val listEvents: List<ListEventsItem?>? = null,
 	val listEvents: List<ListEventsItem> = listOf(),
 
-	@field:SerializedName("error")
-	val error: Boolean? = null,
+    @field:SerializedName("error")
+	val error: Boolean,
 
-	@field:SerializedName("message")
-	val message: String? = null
+    @field:SerializedName("message")
+	val message: String
 )
 
 data class ListEventsItem(
@@ -25,7 +25,7 @@ data class ListEventsItem(
 	val registrants: Int? = null,
 
 	@field:SerializedName("imageLogo")
-	val imageLogo: String? = null,
+	val imageLogo: String,
 
 	@field:SerializedName("link")
 	val link: String? = null,

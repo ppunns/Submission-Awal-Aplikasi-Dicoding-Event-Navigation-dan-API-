@@ -3,4 +3,6 @@
     <string name="title_home">UpComming</string>
     <string name="title_dashboard">Finished</string>
     <string name="title_notifications">Notifications</string>
+    <string name="Favorite">Favorite</string>
+    <string name="setting">Setting</string>
 </resources>
